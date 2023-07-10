@@ -36,7 +36,9 @@ Base Package: ${sbm.defaultBasePackage}
 
     - The package for new classes when no base package can be calculated
 
-    Use -Dsbm.defaultBasePackage=com.acme.packagename as VM parameter on startup to set the property.
+    Use -Dsbm.defaultBasePackage=com.acme.packagename as VM parameter on startup to set the property, for example:
+    java -Dsbm.gitSupportEnabled=false -jar spring-boot-migrator.jar
+
 
 TriggerMesh transformation support of Dataweave: ${sbm.muleTriggerMeshTransformEnabled}
 
@@ -46,7 +48,8 @@ TriggerMesh transformation support of Dataweave: ${sbm.muleTriggerMeshTransformE
     - This will require a TriggerMesh transformation exist on your Kubernetes cluster to function. When running the
       service, be sure to set the `K_SINK` environment variable to your exposed service URL.
 
-    Use -Dsbm.muleTriggerMeshTransformEnabled=true|false as VM parameter on startup to set property.
+    Use -Dsbm.muleTriggerMeshTransformEnabled=true|false as VM parameter on startup to set property, for example:
+    java -Dsbm.muleTriggerMeshTransformEnabled=false -jar spring-boot-migrator.jar
 
 Get Started:
 ------------
